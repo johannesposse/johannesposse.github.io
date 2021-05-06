@@ -1,46 +1,91 @@
 body{
-    background-image: radial-gradient(circle, #00aaff, #008ac6, #186a91, #214b5f, #212d33);
+    background-color: #eee;
+    background-image: radial-gradient(circle, #e9fb24, #f6d300, #fda900, #fd7d00, #f64b00);
     min-height: 100vh;
 }
 
 main{
-    margin: 8rem auto;
-    box-sizing: border-box;
-    max-width: 90%;
+    max-width: 1500px;
+    min-height: 300px;
+    margin: 3rem auto;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    gap: 3rem;
-    background: none;
+    gap: 2rem;
+    align-items: center;
+    
 }
 
-section.slide{
+section.images{
     width: 100%;
-    height: 500px;
-    background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1351&q=80");
-    background-size: cover;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin: 0;
+    gap: 0;
+    /* box-shadow: 0 0 2rem rgb(0, 0, 0, 0.5); */
+}
+
+.topImg{
+    flex: 100%;
+    height: 600px;
     background-position: center;
-    transition: all 1s ease-out;
-    border-radius: 10px;
-    box-shadow: 0 0 2rem rgb(0, 0, 0,0.5);
+    background-size: cover;
+    transition: all 0.2s ease;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 2rem rgb(0, 0, 0, 0.5);
+}
+
+.newImg{
+    height: 200px;
+    flex: 25%;
+    background-position: center;
+    background-size: cover;
+    transition: all 0.2s ease;
+    margin: 0;
+    -webkit-filter: brightness(100%);
+    box-shadow: 0 0 2rem rgb(0, 0, 0, 0.5);
+}
+
+.newImg:hover {
+    -webkit-filter: brightness(50%);
+}
+
+.changePage{
+    display: flex;
+    gap: 1rem;
+    width: 20%;   
 }
 
 
-section.changeSpeed{
-    border-radius: 10px;
-    width: 60%;
-    height: 80px;
-    background-color: #023047;
+section.inputs{
+    width: 70%;
+    box-sizing: border-box;
+    padding: 2rem;
+    align-content: center;
     display: flex;
-    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     justify-content: center;
-    box-shadow: 0 0 2rem rgb(0, 0, 0,0.5);
+    border-radius: 5px;
+    background-color: rgba(39, 39, 39, 0.561);
+    box-shadow: 0 0 2rem rgb(0, 0, 0, 0.5);
+}
+
+.row{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
 }
 
 
 input[type="range"]{
     -webkit-appearance:none;
-    width:95%;
+    width:100%;
     height:20px;
     background: linear-gradient(to right, #6a67ff 0%, #e94411 100%);
     background-position:center;
@@ -48,14 +93,14 @@ input[type="range"]{
     outline: none;
     border-radius: 5px;
   }
-  
+
   input[type="range"]:first-of-type{
     margin: auto auto;
   }
-  
+
   input[type="range"]::-webkit-slider-thumb{
     -webkit-appearance:none;
-    width:20px;
+    width:40px;
     height:40px;
     background:#3a42b8;
     z-index:3;
@@ -63,27 +108,43 @@ input[type="range"]{
     border-radius: 5px;
   }
 
-  section.showValue{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    height: 70px;
-    background-color: #2f2f2f;
-    background: linear-gradient(to right, #6a67ff 0%, #e94411 100%);
+.btn{
+    width: 100%;
+    height: 60px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, #fb5283, #ff3527);
     border-radius: 5px;
-    transition: all 1s ease-out;
-    opacity: 0;
-  }
+    cursor: pointer;
+    transform: scale3d(1,1,1);
+    transition: all .5s ease;
+    font-size: 1.5rem;
+}
 
-  section.showValue P{
-    margin: 0;
-    padding: 0;  
+.btn.shadow{
+    box-shadow:0 0 5px 0 rgba(0,0,0,0.3);
+}
+
+.btn:hover{
+    font-size: large;
+    font-weight: bold;
+    transform:scale3d(1.1, 1.1,1.1);
+}
+
+.text{
+    border-style: none;
+    height: 50px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+#rangeValue{
     color: white;
     font-size: 2rem;
-    text-transform: uppercase;
-  }
-
-
+    flex: 5%;
+}
 

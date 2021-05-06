@@ -1,0 +1,2 @@
+KEY: 8ed52e76b5c4ab1bec78c9e13fbd3f60
+SECRET: d431e17026dc4e9e

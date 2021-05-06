@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Johannes Posse</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <section class="slide"></section>
-
-        <section class="changeSpeed" onmouseover="setText()" onmouseout="mouseLeave()">
-            <input type="range" step="100" min="1000" max="4000" value="2000" name="speed" id="speed" onchange="setTime()">
+        <section class="images">
         </section>
+        <section class="changePage">
+            <button class="btn shadow" id="previous"><</button>
+            <button class="btn shadow" id="next">></button>
+        </section>
+        <section class="inputs">
+            <section class="row">
+                <input type="text" name="" class="text" id="search">
+            </section>
+            <section class="row">
+                <input type="range" step="1" min="9" max="17" value="9" name="foo" id="perPage">
+                <p id="rangeValue"></p>
+            </section>
+            <section class="row">
 
-        <section class="showValue">
-            <!-- <div class="value"></div> -->
-            <p class="value">2 S</p>
+            </section>
+            <section class="row">
+                <button class="btn" id="btnSearch">Search</button>
+            </section>
         </section>
     </main>
 </body>
-<script src="base.js"></script>
+<script src="main.js"></script>
 </html>
