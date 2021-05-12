@@ -8,13 +8,38 @@ const apiKey = "api_key=8ed52e76b5c4ab1bec78c9e13fbd3f60"
 const query2 = "&sort=relevance&"
 const query3 = "&format=json&nojsoncallback=1"
 
-//&page=1
-
-document.querySelector(".forms").style.visibility = "hidden"
+let forms = document.querySelector(".forms").style.visibility = "hidden"
 
 const btn = document.querySelector("#btnSearch")
+const nextBtn = document.querySelector("#next")
+const prevBtn = document.querySelector("#previous")
+
+document.addEventListener('keypress', async function (e){
+    if (e.key === 'Enter') {
+        API();
+      }
+})
 
 btn.addEventListener("click", async function(){
+    API();
+});
+
+nextBtn.addEventListener("click", async function(){
+    page++
+    API();
+});
+
+prevBtn.addEventListener("click", async function(){
+    if(page == 1){
+        alert("Can't go back.. Aldready on first page")
+    }else{
+        page--
+        API();
+    }
+});
+
+
+async function API(){
     let search = document.querySelector("#search").value
     let perPage = "per_page=" + document.querySelector("#perPage").value
     
@@ -33,7 +58,7 @@ btn.addEventListener("click", async function(){
         generateIMG(data.photos.photo);
         document.querySelector(".changePage").style.display = "flex"
     }
-});
+}
 
 function generateIMG(data){
     
@@ -60,6 +85,7 @@ function generateIMG(data){
             addImg.append(newImg);
         }
     }
+    
     const changeImg = document.querySelectorAll(".newImg").forEach(x => {
             x.addEventListener("click", function(){
             let top = document.querySelector(".topImg").style.backgroundImage
@@ -78,56 +104,7 @@ function removePhotos(className){
     }
 }
 
-let nextBtn = document.querySelector("#next")
-let prevBtn = document.querySelector("#previous")
 
-nextBtn.addEventListener("click", async function(){
-    let search = document.querySelector("#search").value
-    let perPage = "per_page=" + document.querySelector("#perPage").value
-    
-    if(search == "")
-    {
-        alert("please enter something in the searchbox")
-    }
-    else
-    {
-        page++
-        let searchPath ="&text=" + search
-        let url = `${protcol}${urlName}${path}${query}${apiKey}${searchPath}${query2}${perPage}${query3}&page=${page}`
-        const response = await fetch(url)
-        const data = await response.json()
-        console.log(url)
-        document.querySelector("#pages").innerHTML = data.photos.page + " / " + data.photos.pages
-        generateIMG(data.photos.photo);
-        
-    }
-});
-
-prevBtn.addEventListener("click", async function(){
-    let search = document.querySelector("#search").value
-    let perPage = "per_page=" + document.querySelector("#perPage").value
-    
-    if(search == "")
-    {
-        alert("please enter something in the searchbox")
-    }
-    else
-    {
-        if(page == 1){
-            alert("Can't go back.. Aldready on first page")
-        }else{
-            page--
-        }
-        let searchPath ="&text=" + search
-        let url = `${protcol}${urlName}${path}${query}${apiKey}${searchPath}${query2}${perPage}${query3}&page=${page}`
-        const response = await fetch(url)
-        const data = await response.json()
-        console.log(url)
-        document.querySelector("#pages").innerHTML = data.photos.page + " / " + data.photos.pages
-        generateIMG(data.photos.photo);
-        
-    }
-});
 
 let filterBtn = document.querySelector("#btnFilter")
 filterBtn.addEventListener("click", function(){
