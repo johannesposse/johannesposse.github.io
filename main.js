@@ -75,7 +75,7 @@ function generateIMG(data){
     removePhotos("topImg");
 
     const large = "_b.jpg";
-    const small = "_s.jpg";
+    const small = "_m.jpg";
 
     for(let i = 0; i < data.length; i++){
         const farmID = data[i].farm;
@@ -93,7 +93,7 @@ function generateIMG(data){
         }else{
             const newImg = document.createElement("section");
             newImg.className = "newImg";
-            newImg.style.backgroundImage = "url(" + imgUrl + "_m.jpg"+ ")";
+            newImg.style.backgroundImage = "url(" + imgUrl + small + ")";
             addImg.append(newImg);
         }
     }
