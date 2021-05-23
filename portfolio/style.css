@@ -1,0 +1,316 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: #1f4037;  
+    background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  
+    background: linear-gradient(to right, #99f2c8, #1f4037); 
+    
+}
+
+h1,h2,h3,h4,p{
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+section.profileImgheader{
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content:flex-start;
+    border-radius: 3px 3px 0 0;
+    background-image: url("img/headerIMG.JPEG");
+    background-position:0 450px;
+    background-size: cover;
+    box-shadow: 0 0 5rem rgb(0, 0, 0, 0.2);
+
+}
+
+div.circular{
+    display: flex;
+    position:relative;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    top: 110px;
+    overflow: hidden;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    border-width: 6px;
+    margin-left: 3rem;
+}
+
+img.profileImg{
+    width: auto;
+    height: auto;
+    transform: scale(2);
+    margin-top: 50px;
+    margin-right: 10px;
+}
+
+section.profileCol{
+    display: flex;
+    background-color: white;
+    
+}
+
+section.profileImgBody{
+    flex:50%;
+    min-height: 300px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 0 0 3px 3px;
+    padding-top: 8rem;
+    display: flex;
+    flex-direction:  column;
+    align-items: flex-start;
+    /* box-shadow: 0 0 5rem rgb(0, 0, 0, 0.2); */
+}
+
+section.profileContact{
+    flex: 50%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    padding-right: 3rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 2rem;
+    
+}
+
+section.profileContact img{
+    height: 40px;
+    transition: all 0.5s ease;
+}
+
+section.profileContact img:hover{
+    transform: scale(1.05);
+}
+section.profileImgBody h2{
+    margin-bottom: 0.5rem;
+}
+
+section.profileImgBody h2,h3{
+    margin-left: 3rem;
+}
+
+section.pLanguages{
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 40px;
+    gap: 1rem;
+    box-sizing: border-box;
+    /* background-color: red; */
+    justify-content: flex-start;
+    margin-left: 3rem;
+}
+
+img.pLangImg{
+    height: 100%;
+
+}
+
+article.info{
+    margin-top: 2rem;
+    padding: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    min-height: 200px;
+    background-color: white;
+    box-shadow: 0 0 5rem rgb(0, 0, 0, 0.2);
+}
+
+article.projects{
+    margin-top: 2rem;
+    width: 100%;
+    gap: 2rem;
+    min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: green; */
+}
+
+section.project{
+    flex: 45%;
+    min-height: 300px;
+    background-color: white;
+    box-shadow: 0 0 5rem rgb(0, 0, 0, 0.2);
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+
+img.projectImg{
+    width: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: all 0.5s ease;
+}
+
+article.contact{
+    margin-top: 2rem;
+    width: 100%;
+    min-height: 300px;
+    background-color: white;
+    box-shadow: 0 0 5rem rgb(0, 0, 0, 0.2);
+    display: flex;
+    padding: 2rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 3px;
+    /* align-items: center;
+    justify-content: center; */
+    
+}
+
+section.contactCol{
+    display: flex;
+    justify-content:space-between;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+section.contactForm{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+section.contactInfo{
+    align-self: flex-end;
+}
+
+article.contact h2{
+    margin-bottom: 1rem;
+}
+
+
+input{
+    height: 30px;
+}
+
+
+.btn{
+    text-decoration: none;
+    border-style: none;
+    width: 90%;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    background-color:  #1f4037;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.btn.large{
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 1000px) {
+   
+    div.wrapper{
+        margin: 0.1rem;
+        margin-top: 2rem;
+    }
+
+    section.profileImgheader{
+        background-position: center;
+    }
+
+    div.circular{
+        margin: 0;
+    }
+
+    section.profileImgBody h2, h3{
+        margin: 0;
+    }
+    /* body, html{
+        width: 100%;
+    } */
+
+    section.pLanguages{
+        justify-content: center;
+        margin: 0;
+        margin-top: 2rem;
+    }
+    section.profileImgBody{
+        justify-content: center;
+        align-items: center;
+    }
+
+    article.projects{
+        flex-direction: column;
+    }
+
+    section.profileCol{
+        flex-direction: column;
+        
+    }
+
+    section.profileContact{
+        justify-content: center;
+        padding-left: 3rem;
+        margin-top: 1rem;
+        padding-top: 0;
+    }
+
+    .btn{
+        width: 90%;
+        margin-top: 2rem;
+    }
+
+    section.contactCol{
+        flex-direction: column;
+        gap: 1rem;
+        
+    }
+
+    section.contactInfo{
+        align-self:flex-start;
+    }
+
+    section.contactForm{
+        width: 90%;
+    }
+
+    input{
+        width: 100%;
+        margin: 0;
+    }
+
+    section.profileContact img{
+        height: 30px;
+    }
+
+    section.profileImgheader{
+        justify-content: center;
+    }
+  }

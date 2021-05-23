@@ -1,0 +1,19 @@
+@media screen and (max-width:480px){
+    body{
+        background-color: red;
+    }
+
+    .btn{
+        background-color: red;
+    }
+  }
+
+  @media screen and (min-width:480px){
+    body{
+        background-color: red;
+    }
+
+    .btn{
+        background-color: red;
+    }
+  }
