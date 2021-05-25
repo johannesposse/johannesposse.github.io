@@ -27,7 +27,7 @@ section.profileImgheader{
     display: flex;
     justify-content:flex-start;
     border-radius: 3px 3px 0 0;
-    background-image: url("img/headerIMG.JPEG");
+    background-image: url("img/headerIMG.jpg");
     background-position:0 450px;
     background-size: cover;
     box-shadow: 0 0 5rem rgb(0, 0, 0, 0.2);
@@ -52,8 +52,8 @@ div.circular{
 img.profileImg{
     /* width: auto;
     height: auto; */
-    transform: scale(2);
-    margin-top: 50px;
+    transform: scale(1.25);
+    margin-top: 20px;
     margin-right: 10px;
 }
 
