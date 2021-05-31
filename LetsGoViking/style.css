@@ -216,7 +216,7 @@ header nav a:hover{
     background:linear-gradient(360deg, #00000088 50%, #ffffff44 100%), url("https://images.unsplash.com/photo-1615672968910-90f554a4d607?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1957&q=80");
     background-position: center;
     background-size: cover;
-    box-shadow: 0 0 2rem rgb(0, 0, 0, 0.3); */
+    box-shadow: 0 0 2rem rgb(0, 0, 0, 0.3); 
 }
 
 .card h3, p{
