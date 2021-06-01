@@ -31,7 +31,7 @@ function sendEmail(){
     Email.send({
         Host : "mail1.webnode.com",
         Username : "info@letsgoviking.com",
-        Password : "bevakningstjanst123",
+        Password : "xxxx",
         To : 'info@letsgoviking.com',
         From : "info@letsgoviking.com",
         Subject : "Nytt meddelande från Let's Go Viking",
