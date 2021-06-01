@@ -6,7 +6,7 @@
 }
 
 html {
-    scroll-padding-top: 200px; /* height of sticky header */
+    scroll-padding-top: 200px; 
   }
 
 h1 {
@@ -53,7 +53,7 @@ body{
 
 .wrapper{
     min-height: 100vh;
-    max-width: 100%;
+    /* max-width: 100%; */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -161,7 +161,7 @@ header nav a:hover{
     url("https://images.unsplash.com/photo-1566840849929-5a60a802788d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1567&q=80");
     background-size: cover;
     background-position:bottom;
-    height: 600px;
+    max-height: 600px;
 }
 
 
@@ -184,7 +184,6 @@ header nav a:hover{
 }
 
 .btn{
-    width: 300px;
     width: 400px;
     height: 60px;
     border: 0;
@@ -390,17 +389,19 @@ and (max-width : 900px) {
         padding: 1rem;
     }
 
+    .btn{
+        width: 100%;
+    }
+
     .menuIco{
         display: block;
         width: 50px;
     }
 
     .welcome{
-        flex-direction: column;
-        padding: 2rem;
-        height: auto;
+        flex-direction: column; 
+         padding: 2rem; 
     }
-
 
     .wCol2{
         display: none;
