@@ -285,7 +285,7 @@ header nav a:hover{
 }
 
 .card.femkamp{
-    background:linear-gradient(0deg, #00000088 100%, #ffffff44 10%), url("img/images/femkamp_1.JPEG");
+    background:linear-gradient(0deg, #00000088 100%, #ffffff44 10%), url("img/images/femkamp_1.jpg");
     background-position: center;
     background-size: cover;
 }
