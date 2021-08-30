@@ -2,6 +2,10 @@ let menuIco = document.querySelector("#menuIco");
 let mobileMenu = document.querySelector(".mobileMenu");
 mobileMenu.style.display = "none";
 
+
+
+
+
 menuIco.addEventListener("click", function(){
     
 
@@ -17,7 +21,6 @@ menuIco.addEventListener("click", function(){
         mobileMenu.style.display = "none"
     }
 })
-
 
 
 
@@ -66,3 +69,6 @@ function confirm()
     document.querySelector(".confirm").style.webkitAnimationDuration =".5s"
    
 }
+
+
+

@@ -130,8 +130,8 @@ hr{
 }
 
 header img{
-    width: 100px;
-    margin-left: 1rem;
+    width: 80px;
+    margin-left: 2rem;
 }
 
 header nav {
@@ -168,7 +168,7 @@ header nav a:hover{
     url("https://images.unsplash.com/photo-1566840849929-5a60a802788d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1567&q=80");
     background-size: cover;
     background-position:bottom;
-    max-height: 600px;
+    max-height: 650px;
 }
 
 
@@ -190,8 +190,13 @@ header nav a:hover{
 }
 
 .wCol2{
+    
     position:relative;
     flex-basis: 40%;
+}
+
+.wCol2 img{
+    width: 60%;
 }
 
 .btn{
@@ -229,9 +234,6 @@ header nav a:hover{
 }
 
 
-.wCol2 img{
-    width: 70%;
-}
 
 .whatIs{
     display: flex;
@@ -264,10 +266,46 @@ header nav a:hover{
     box-sizing: border-box;
     border-radius: 2px;
     color: white;
-    background:linear-gradient(0deg, #00000088 100%, #ffffff44 10%), url("https://images.unsplash.com/photo-1615672968910-90f554a4d607?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1957&q=80");
+    /* background:linear-gradient(0deg, #00000088 100%, #ffffff44 10%), url("https://images.unsplash.com/photo-1615672968910-90f554a4d607?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1957&q=80"); */
     background-position: center;
     background-size: cover;
     box-shadow: 0 0 2rem rgb(0, 0, 0, 0.3); 
+}
+
+.card.yxkastning{
+    background:linear-gradient(0deg, #00000088 100%, #ffffff44 10%), url("img/images/yxkastning_1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card.pilbagsskytte{
+    background:linear-gradient(0deg, #00000088 100%, #ffffff44 10%), url("img/images/pilbagsskytte_1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card.femkamp{
+    background:linear-gradient(0deg, #00000088 100%, #ffffff44 10%), url("img/images/femkamp_1.JPEG");
+    background-position: center;
+    background-size: cover;
+}
+
+.card.mjod{
+    background:linear-gradient(0deg, #00000088 100%, #ffffff44 10%), url("img/images/mjod_1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card.musik{
+    background:linear-gradient(0deg, #00000088 100%, #ffffff44 10%), url("img/images/musik_1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card.mat{
+    background:linear-gradient(0deg, #00000088 100%, #ffffff44 10%), url("img/images/mat_1.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .card h3, p{
@@ -310,6 +348,58 @@ header nav a:hover{
     min-height: 220px;
     gap: 3rem;
 }
+
+.upplevelseImg{
+    display: flex;
+    width: 100%;
+    height: 150px;
+    margin-left: 13rem;
+    align-items:center;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.upplevelseImg img{
+    max-width: 200px;
+    /* max-height: 200px; */
+    transition: all 0.5s;
+
+}
+
+.upplevelseImg img:hover{
+    transform: scale(1.2);
+    overflow: visible;
+}
+
+
+.module{
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    height: 70%;
+    z-index: 9;
+    align-self: center;
+    top: 15%;
+    position:fixed;
+    background-color: rgba(0, 0, 0, 0.897);
+    background-image: url("img/images/musik.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.arrows{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25%;
+}
+
+.module img{
+    height: 50px;
+    width: 50px;
+    margin: 1rem;
+}
+
 
 .upplevelse img{
     width: 150px;
@@ -387,7 +477,7 @@ header nav a:hover{
 
 footer{
     width: 100%;
-    height: 300px;
+    height: 100px;
     background-color: var(--menuColor);
     margin-top: 2rem;
     display: flex;
@@ -482,3 +572,4 @@ and (max-width : 1140px) {
     
 
 }
+
